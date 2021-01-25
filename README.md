@@ -1,1 +1,1 @@
-#blog site
+#blog app
