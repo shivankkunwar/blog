@@ -6,22 +6,29 @@ body {
 .post-link {
   text-decoration: none;
 }
+
 header {
   min-height: 350px;
-  background-color: blue;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/banner.jpeg);
+
   background-size: cover;
   background-position: center;
   position: relative;
 }
-header > * {
+
+.home-page header,
+.new-post-page header {
+  background-image: url(../assets/banner.jpeg);
+}
+
+header>* {
   z-index: 10;
 }
+
 header::after {
   content: "";
   position: absolute;
@@ -31,6 +38,7 @@ header::after {
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .profile-image {
   width: 100px;
   height: 100px;
@@ -39,13 +47,17 @@ header::after {
   background-image: url("../assets/profile\ \(2\).png");
   background-size: cover;
 }
-.profile-name {
+
+.profile-name,
+title {
   font-size: 2em;
   font-weight: bold;
 }
+
 .subtext {
   margin-top: 8px;
 }
+
 .main {
   margin-top: 32px;
   display: flex;
@@ -59,6 +71,7 @@ header::after {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .post {
   display: flex;
   border: 1px solid #eaecee;
@@ -68,14 +81,17 @@ header::after {
   transition: all 0.25s ease;
   margin-top: 24px;
 }
+
 .post:hover {
   transform: translate3d(0, -5px, 0);
   box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
+
 .post-image {
   flex-basis: 40%;
-  background-image: url(https://images.unsplash.com/photo-1610925836869-1d2550ce0de8?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Ym84alFLVGFFMFl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+
   background-size: cover;
+  background-position: center;
 }
 
 .post-content {
@@ -93,6 +109,7 @@ footer {
   margin-top: 40px;
   font-size: 14px;
 }
+
 .post-date {
   font-size: 12px;
   color: #adb5bd;
@@ -105,9 +122,11 @@ footer {
   columns: #333333;
   font-weight: 600;
 }
+
 .post-title h4 {
   margin: 0;
 }
+
 .post-text {
   margin-top: 4px;
   color: #495057;
@@ -116,8 +135,10 @@ footer {
   max-height: 65px;
   overflow: hidden;
 }
+
 .nav-button.nav-post-button {
-  position: fixed; /*sticks to bottom while scrolling*/
+  position: fixed;
+  /*sticks to bottom while scrolling*/
   bottom: 30px;
   right: 30px;
   font-size: 24px;
@@ -137,10 +158,16 @@ footer {
 .nav-button.nav-post-button:hover {
   background-color: #002349;
 }
+
 .navigation a {
   text-decoration: none;
   color: #004186;
   border: 1px solid #004186;
   border-radius: 5px;
   padding: 5px 8px;
+}
+
+a.postlink {
+  text-decoration: none;
+  color: black;
 }
